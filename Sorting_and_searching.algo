@@ -1,0 +1,16 @@
+VAR
+  Tab1:ARRAY_OF INTEGER[n];
+  cp,i,tp:INTEGER;
+BEGIN
+  FOR i FROM 0 TO Tab1.length STEP 1  DO
+    tp:=Tab1[i];
+    cp:=i;
+    WHILE (cp>0 AND tmp<Tab1[cp-1]) DO
+      Tab1[cp]:=Tab[cp-1];
+      cp:=cp-1;
+    END_WHILE
+    Tab1[cp]:=tp;
+
+  END_FOR
+  write(Tab1);
+END
